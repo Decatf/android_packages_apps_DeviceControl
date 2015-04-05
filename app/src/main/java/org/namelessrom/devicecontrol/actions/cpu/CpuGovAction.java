@@ -74,7 +74,6 @@ public class CpuGovAction extends BaseAction {
         final BootupConfiguration configuration = BootupConfiguration.get(Application.get());
         String path;
         for (int i = 0; i < cpus; i++) {
-            sb.append(CpuUtils.get().onlineCpu(i));
             path = GovernorUtils.get().getGovernorPath(i);
             sb.append(Utils.getWriteCommand(path, value));
             if (bootup) {
